@@ -1,0 +1,25 @@
+>
+<HEAD>
+<TITLE>INSERT_RECORD</TITLE>
+
+ <style>
+body {
+background-image: url("http://mail.wallpapersweb.com/data/media/156/Aventador.jpg");
+background-repeat: no-repeat;
+background-size: 100% 100% }
+</style> 
+
+</HEAD>
+<BODY>
+<H1><U>ENTER THE FOLLOWING DETAILS:</H1>
+<FORM ACTION="hospital_insert.php" method="post">
+H_ID:<INPUT TYPE="TEXT" NAME="L1"><br><br><br>
+ADDRESS:<INPUT TYPE="TEXT" NAME="L2"><br><br><br>
+H_TYPE:<INPUT TYPE="TEXT" NAME="L3"><br><br><br>
+H_PH_NO :<INPUT TYPE="TEXT" NAME="L4"><br><br><br>
+
+<BR>
+<INPUT TYPE="SUBMIT" NAME="SUBMIT">
+</FORM>
+</BODY>
+</HTML>

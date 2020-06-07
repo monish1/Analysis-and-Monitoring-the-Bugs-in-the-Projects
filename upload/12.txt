@@ -1,0 +1,33 @@
+
+
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "RAILWAY_MANAGEMENT_SYSTEM";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+//echo "  CONNECTION ESTABLISHED \r\n";
+//echo "  INSERTION IN PROCESS";
+$TRAIN_NO=$_POST["L1"];
+$TRAIN_NAME=$_POST["L2"];
+$SOURCE=$_POST["L3"];
+$DESTINATION=$_POST["L4"];
+
+
+$sql = "INSERT INTO TRAIN (TRAIN_NO,TRAIN_NAME,SOURCE,DESTINATION)
+VALUES ('$TRAIN_NO','$TRAIN_NAME','$SOURCE','$DESTINATION')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
